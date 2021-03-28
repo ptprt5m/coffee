@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+  .whyUs__wrapper {
+    padding: 10px 45px 15px;
+  }
+  .whyUs__item {
+    max-width: 206px;
+  }
+}

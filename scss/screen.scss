@@ -1,0 +1,21 @@
+@import "__variables.scss";
+@import "__mixins.scss";
+
+@media screen and (min-width: 1440px) {
+    
+}
+
+@media screen and (max-width: $tableWidth) {
+    .whyUs {
+        &__wrapper {
+            padding: 10px 45px 15px;
+        }
+        &__item {
+            max-width: 206px;
+        }
+    }
+}
+
+@media screen and (max-width: 545px) {
+    
+}

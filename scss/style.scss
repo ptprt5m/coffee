@@ -1,0 +1,260 @@
+@import "__variables.scss";
+@import "__mixins.scss";
+
+//Common styles
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	@include wh;
+	background: url('../img/main/bg.jpg') no-repeat center fixed;
+	background-size: cover;
+}
+
+.wrapper {
+	max-width: $wrapperWidth;
+	height: auto;
+	margin: 0 auto;
+}
+
+//Header styles
+
+.header {
+	&__absolute {
+		position: absolute;
+		background: url('../img/main/absolute.png') no-repeat left top;
+		background-size: cover;
+		border-radius: 0 0 50px 0;
+		top: 0;
+		left: 0;
+		width: 45vw;
+		height: 60vh;
+		z-index: -1;
+	}
+	&__wrapper {
+		@include flex;
+		padding-top: 13px;
+	}
+	&__links {
+		ul {
+			@include flex;
+			li {
+				&:not(:last-child) {
+					margin-right: 24px;
+				}
+			}
+		}
+	}
+	&__logo {
+		@include links;
+	}
+	&__link {
+		@include text(18px, 18px, $white, 300);
+		&:hover, &:active, &:focus {
+			background: url('../img/header/active.png') no-repeat bottom left;
+		}
+		cursor: pointer;
+		text-decoration: none;
+		padding: 5px 0;
+		transition: .3s all;
+	}
+	&__calls {
+		@include flexColumn {
+			align-items: flex-end
+		}
+		&-number {
+			@include text(20px, 18px, $white, 500);
+			@include links;
+			background: url('../img/header/call.png') no-repeat center left;
+			padding: 8px 0 8px 42px;
+		}
+	}
+}
+
+//To order styles
+
+.toOrder {
+	&__wrapper {
+		@include flex {
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+	&__link {
+		@include text(18px, 18px, $orangeGray, 800);
+		@include links;
+		text-decoration: underline;
+	}
+}
+
+//GourmetCoffee styles
+
+.gourmetCoffee {
+	&__wrapper {
+		padding: 100px 0 65px 65px;
+	}
+	&__title {
+		@include text(52px, 54px, $white, normal);
+		@include YesevaOne;
+		max-width: 670px;
+		margin-bottom: 24px;
+	}
+	&__subtitle {
+		@include text(24px, 30px, $orangeGray, normal);
+		max-width: 475px;
+		margin-bottom: 77px;
+	}
+	&__link {
+		@include text(22px, 36px, $orangeGray, 600);
+		&:hover, &:active, &:focus {
+			box-shadow: 0px 0px 26px 4px #C3B8AC;
+		}
+		cursor: pointer;
+		text-decoration: none;
+		transition: .3s all;
+		padding: 13px 40px;
+		border-radius: 50px;
+		box-shadow: 0px 0px 13px 2px #C3B8AC;
+		background: linear-gradient(180deg, rgba(133, 105, 77, 0.2) 0%, rgba(56, 44, 33, 0.2) 100%), #382C21;
+	}
+	&__media {
+		@include flexColumn {
+			align-items: flex-end;
+		}
+		&-item {
+			@include links;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+//Why us styles
+
+.whyUs {
+	&__wrapper {
+		padding: 10px 0 15px 65px;
+	}
+	&__title {
+		@include text(40px, 60px, $white, normal);
+		@include YesevaOne;
+		margin-bottom: 50px;
+	}
+	&__items {
+		@include flex {
+			align-items: flex-start;
+		}
+	}
+	&__item {
+		max-width: 255px;
+		padding-top: 86px;
+		&-like {
+			background: url('../img/whyUs/like.png') no-repeat top center;
+		}
+		&-persent {
+			background: url('../img/whyUs/persent.png') no-repeat top center;
+		}
+		&-delivery {
+			background: url('../img/whyUs/delivery.png') no-repeat top center;
+		}
+		&-title {
+			@include text(28px, 32px, $orangeGray, normal);
+			@include YesevaOne;
+			margin-bottom: 16px;
+		}
+		&-subtitle {
+			@include text(18px, 22px, $orangeGray, normal);
+		}
+	}
+}
+
+//Modal window
+
+.modalWindow {
+	position: fixed;
+	top: calc(100vh/4.5);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+
+	&__wrapper {
+		@include flexColumn;
+		max-width: 540px;
+		padding-top: 24px;
+		position: relative;
+		background-color: $orangeGray;
+		box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		margin: 0 auto;
+	}
+	&__form {
+		@include flexColumn {
+			align-items: flex-start;
+		}
+		label {
+			&:first-child {
+				@include text(16px, 22px, $brown, 600);
+			}
+			&:last-child {
+				@include text(16px, 22px, $brown, 300);
+			}
+			margin-bottom: 8px;
+		}
+		&-text {
+			@include text(16px, 22px, $brownOrange, 300);
+			padding: 9px 12px;
+			border: 0;
+			border-radius: 5px;
+			min-width: 350px;
+			margin-bottom: 16px;
+			z-index: 11;
+		}
+		&-submit {
+			@include text(22px, 36px, $orangeGray, 600);
+			@include links(90%);
+			background: linear-gradient(180deg, rgba(133, 105, 77, 0.2) 0%, rgba(56, 44, 33, 0.2) 100%), #382C21;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 5px;
+			padding: 13px 33px;
+			border: 0;
+			margin: auto;
+			margin-bottom: 24px;
+		}
+	}
+	&__close {
+		@include links;
+		position: absolute;
+		top: 24px;
+		right: 18px;
+	}
+	&__title {
+		@include text(30px, 30px, $brown, normal);
+		@include YesevaOne;
+		margin-bottom: 8px;
+	}
+	&__subtitle {
+		@include text(18px, 22px, $brown, normal);
+		max-width: 348px;
+		margin-bottom: 24px;
+	}
+}
+
+.modalWindowVisible {
+	opacity: 100;
+	pointer-events: all;
+}
+
+.error {
+	outline: 1px solid red;
+}

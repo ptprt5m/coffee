@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Coffee</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+	
+	<header>
+		<div class="header__absolute"></div>
+		<div class="wrapper">
+			<div class="header__wrapper">
+				<div class="header__logo">
+					<a href="#!">
+						<img src="img/header/logo.png" alt="logo" title="Главная страница">
+					</a>
+				</div>
+				<nav class="header__links">
+					<ul>
+						<li>
+							<a href="#advantages" class="header__link">Преимущества</a>
+						</li>
+						<li>
+							<a href="#!" class="header__link">Оплата и доставка</a>
+						</li>
+						<li>
+							<a href="#!" class="header__link">Заказать кофе</a>
+						</li>
+						<li>
+							<a href="#!" class="header__link">Отзывы</a>
+						</li>
+						<li>
+							<a href="#!" class="header__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__calls">
+					<a href="#!" class="header__calls-number">+7 (964) 324-41-25</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="toOrder">
+			<div class="wrapper">
+				<div class="toOrder__wrapper">
+					<a href="#!" class="toOrder__link">Заказать звонок</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="gourmetCoffee">
+			<div class="wrapper">
+				<div class="gourmetCoffee__wrapper">
+					<h1 class="gourmetCoffee__title">
+						Изысканный кофе для настоящих гурманов
+					</h1>
+					<p class="gourmetCoffee__subtitle">
+						Качественный индийский зерновой кофе на развес с доставкой по всей Москве в течение 24 часов после заказа
+					</p>
+					<a href="#openModal" class="gourmetCoffee__link">
+						ЗАКАЗАТЬ В 1 КЛИК
+					</a>
+					<div class="gourmetCoffee__media">
+						<a href="#!" class="gourmetCoffee__media-item">
+							<img src="img/gourmetCoffee/vk.png" alt="vk">
+						</a>
+						<a href="#!" class="gourmetCoffee__media-item">
+							<img src="img/gourmetCoffee/inst.png" alt="inst">
+						</a>
+						<a href="#!" class="gourmetCoffee__media-item">
+							<img src="img/gourmetCoffee/youtube.png" alt="youtube">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="whyUs" id="advantages">
+			<div class="wrapper">
+				<div class="whyUs__wrapper">
+					<h3 class="whyUs__title">
+						Почему именно мы?
+					</h3>
+					<div class="whyUs__items">
+						<div class="whyUs__item whyUs__item-like">
+							<h4 class="whyUs__item-title">Качество</h4>
+							<p class="whyUs__item-subtitle">Мы продаем только элитные сорта кофе</p>
+						</div>
+						<div class="whyUs__item whyUs__item-persent">
+							<h4 class="whyUs__item-title">Скидки</h4>
+							<p class="whyUs__item-subtitle">Предоставляем скидки до 20% постоянным клиентам</p>
+						</div>
+						<div class="whyUs__item whyUs__item-delivery">
+							<h4 class="whyUs__item-title">Быстрая доставка</h4>
+							<p class="whyUs__item-subtitle">Курьер доставит ваш заказ в течение 24-х часов</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="modalWindow" id="openModal">
+			<div class="wrapper">
+				<div class="modalWindow__wrapper">
+					<h6 class="modalWindow__title">
+						Заказ кофе
+					</h6>
+					<p class="modalWindow__subtitle">
+						Пожалуйста, оставьте ваши контактные данные и мы с вами свяжемся.
+					</p>
+					<form class="modalWindow__form">
+						<label for="username">Имя*</label>
+						<input type="text" placeholder="Лидия Николаев" class="modalWindow__form-text">
+						<label for="userphone">Телефон*</label>
+						<input type="text" class="modalWindow__form-text">
+						<input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="modalWindow__form-submit">
+					</form>
+					<a href="#close" class="modalWindow__close">
+						<img src="img/modal/close.png" alt="close">
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html> 

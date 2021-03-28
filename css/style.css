@@ -1,0 +1,369 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: auto;
+  height: auto;
+  background: url("../img/main/bg.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 1140px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.header__absolute {
+  position: absolute;
+  background: url("../img/main/absolute.png") no-repeat left top;
+  background-size: cover;
+  border-radius: 0 0 50px 0;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  height: 60vh;
+  z-index: -1;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 13px;
+}
+.header__links ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header__links ul li:not(:last-child) {
+  margin-right: 24px;
+}
+.header__logo {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.header__logo:hover, .header__logo:active, .header__logo:focus {
+  opacity: 65%;
+}
+.header__link {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: #FFFFFF;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: 0.3s all;
+}
+.header__link:hover, .header__link:active, .header__link:focus {
+  background: url("../img/header/active.png") no-repeat bottom left;
+}
+.header__calls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.header__calls-number {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 18px;
+  color: #FFFFFF;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  background: url("../img/header/call.png") no-repeat center left;
+  padding: 8px 0 8px 42px;
+}
+.header__calls-number:hover, .header__calls-number:active, .header__calls-number:focus {
+  opacity: 65%;
+}
+
+.toOrder__wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.toOrder__link {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: #C3B8AC;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  text-decoration: underline;
+}
+.toOrder__link:hover, .toOrder__link:active, .toOrder__link:focus {
+  opacity: 65%;
+}
+
+.gourmetCoffee__wrapper {
+  padding: 100px 0 65px 65px;
+}
+.gourmetCoffee__title {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 52px;
+  line-height: 54px;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-family: Yeseva One;
+  max-width: 670px;
+  margin-bottom: 24px;
+}
+.gourmetCoffee__subtitle {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #C3B8AC;
+  font-weight: normal;
+  max-width: 475px;
+  margin-bottom: 77px;
+}
+.gourmetCoffee__link {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 36px;
+  color: #C3B8AC;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  padding: 13px 40px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 13px 2px #C3B8AC;
+  background: linear-gradient(180deg, rgba(133, 105, 77, 0.2) 0%, rgba(56, 44, 33, 0.2) 100%), #382C21;
+}
+.gourmetCoffee__link:hover, .gourmetCoffee__link:active, .gourmetCoffee__link:focus {
+  box-shadow: 0px 0px 26px 4px #C3B8AC;
+}
+.gourmetCoffee__media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.gourmetCoffee__media-item {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.gourmetCoffee__media-item:hover, .gourmetCoffee__media-item:active, .gourmetCoffee__media-item:focus {
+  opacity: 65%;
+}
+.gourmetCoffee__media-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.whyUs__wrapper {
+  padding: 10px 0 15px 65px;
+}
+.whyUs__title {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 60px;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-family: Yeseva One;
+  margin-bottom: 50px;
+}
+.whyUs__items {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.whyUs__item {
+  max-width: 255px;
+  padding-top: 86px;
+}
+.whyUs__item-like {
+  background: url("../img/whyUs/like.png") no-repeat top center;
+}
+.whyUs__item-persent {
+  background: url("../img/whyUs/persent.png") no-repeat top center;
+}
+.whyUs__item-delivery {
+  background: url("../img/whyUs/delivery.png") no-repeat top center;
+}
+.whyUs__item-title {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 32px;
+  color: #C3B8AC;
+  font-weight: normal;
+  font-family: Yeseva One;
+  margin-bottom: 16px;
+}
+.whyUs__item-subtitle {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #C3B8AC;
+  font-weight: normal;
+}
+
+.modalWindow {
+  position: fixed;
+  top: calc(100vh/4.5);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalWindow__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 540px;
+  padding-top: 24px;
+  position: relative;
+  background-color: #C3B8AC;
+  box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.modalWindow__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.modalWindow__form label {
+  margin-bottom: 8px;
+}
+.modalWindow__form label:first-child {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #382C21;
+  font-weight: 600;
+}
+.modalWindow__form label:last-child {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #382C21;
+  font-weight: 300;
+}
+.modalWindow__form-text {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #85694D;
+  font-weight: 300;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 5px;
+  min-width: 350px;
+  margin-bottom: 16px;
+  z-index: 11;
+}
+.modalWindow__form-submit {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 36px;
+  color: #C3B8AC;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  background: linear-gradient(180deg, rgba(133, 105, 77, 0.2) 0%, rgba(56, 44, 33, 0.2) 100%), #382C21;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 13px 33px;
+  border: 0;
+  margin: auto;
+  margin-bottom: 24px;
+}
+.modalWindow__form-submit:hover, .modalWindow__form-submit:active, .modalWindow__form-submit:focus {
+  opacity: 90%;
+}
+.modalWindow__close {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  position: absolute;
+  top: 24px;
+  right: 18px;
+}
+.modalWindow__close:hover, .modalWindow__close:active, .modalWindow__close:focus {
+  opacity: 65%;
+}
+.modalWindow__title {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: #382C21;
+  font-weight: normal;
+  font-family: Yeseva One;
+  margin-bottom: 8px;
+}
+.modalWindow__subtitle {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #382C21;
+  font-weight: normal;
+  max-width: 348px;
+  margin-bottom: 24px;
+}
+
+.modalWindowVisible {
+  opacity: 100;
+  pointer-events: all;
+}
+
+.error {
+  outline: 1px solid red;
+}
