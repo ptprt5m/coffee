@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *, *::before, *::after {
@@ -59,8 +60,8 @@ body {
 .header__link {
   font-family: Manrope;
   font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
   color: #FFFFFF;
   font-weight: 300;
   cursor: pointer;
@@ -70,6 +71,22 @@ body {
 }
 .header__link:hover, .header__link:active, .header__link:focus {
   background: url("../img/header/active.png") no-repeat bottom left;
+}
+.header__link-toOrder {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 1.1em;
+  line-height: 1.1rem;
+  color: #C3B8AC;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  text-decoration: underline;
+  display: none;
+}
+.header__link-toOrder:hover, .header__link-toOrder:active, .header__link-toOrder:focus {
+  opacity: 65%;
 }
 .header__calls {
   display: flex;
@@ -83,8 +100,8 @@ body {
 .header__calls-number {
   font-family: Manrope;
   font-style: normal;
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  line-height: 1.1rem;
   color: #FFFFFF;
   font-weight: 500;
   cursor: pointer;
@@ -95,6 +112,112 @@ body {
 }
 .header__calls-number:hover, .header__calls-number:active, .header__calls-number:focus {
   opacity: 65%;
+}
+
+/* Burger style start */
+.header__burger {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+  order: -1;
+  cursor: pointer;
+}
+.header__burger-menu {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+  color: #C3B8AC;
+  font-weight: 500;
+  margin: 0 8px;
+}
+.header__close {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  position: absolute;
+  top: 24px;
+  right: 36px;
+}
+.header__close:hover, .header__close:active, .header__close:focus {
+  opacity: 65%;
+}
+
+.burger {
+  height: 100%;
+  width: 100%;
+}
+.burger__line {
+  display: block;
+  margin-bottom: 4px;
+  width: 100%;
+  height: 7px;
+  background-color: #C3B8AC;
+  border-radius: 5px;
+}
+.burger__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  text-align: center;
+  background: url("../img/main/absolute.png") no-repeat left top;
+  background-size: cover;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  padding-top: 75px;
+}
+.burger__box a {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 10px;
+  transition: 0.3s all;
+}
+.burger__box a:hover, .burger__box a:active, .burger__box a:focus {
+  background: url("../img/header/active.png") no-repeat bottom center;
+}
+.burger__box ul li {
+  margin-bottom: 30px;
+}
+.burger__box ul li:first-child > a {
+  font-family: Manrope;
+  font-style: normal;
+  font-size: 1.6em;
+  line-height: 1.8rem;
+  color: #C3B8AC;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s all;
+  text-decoration: underline;
+  display: block;
+}
+.burger__box ul li:first-child > a:hover, .burger__box ul li:first-child > a:active, .burger__box ul li:first-child > a:focus {
+  opacity: 65%;
+}
+.burger__box ul li:first-child > a:hover, .burger__box ul li:first-child > a:active, .burger__box ul li:first-child > a:focus {
+  background: transparent;
+}
+
+.header__burger-items {
+  width: 42px;
+  height: 28px;
 }
 
 .toOrder__wrapper {
@@ -109,8 +232,8 @@ body {
 .toOrder__link {
   font-family: Manrope;
   font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.1em;
+  line-height: 1.1rem;
   color: #C3B8AC;
   font-weight: 800;
   cursor: pointer;
@@ -128,8 +251,8 @@ body {
 .gourmetCoffee__title {
   font-family: Manrope;
   font-style: normal;
-  font-size: 52px;
-  line-height: 54px;
+  font-size: 3.25rem;
+  line-height: 3.25rem;
   color: #FFFFFF;
   font-weight: normal;
   font-family: Yeseva One;
@@ -139,8 +262,8 @@ body {
 .gourmetCoffee__subtitle {
   font-family: Manrope;
   font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   color: #C3B8AC;
   font-weight: normal;
   max-width: 475px;
@@ -149,8 +272,8 @@ body {
 .gourmetCoffee__link {
   font-family: Manrope;
   font-style: normal;
-  font-size: 22px;
-  line-height: 36px;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
   color: #C3B8AC;
   font-weight: 600;
   cursor: pointer;
@@ -191,8 +314,8 @@ body {
 .whyUs__title {
   font-family: Manrope;
   font-style: normal;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
   color: #FFFFFF;
   font-weight: normal;
   font-family: Yeseva One;
@@ -222,8 +345,8 @@ body {
 .whyUs__item-title {
   font-family: Manrope;
   font-style: normal;
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.8rem;
+  line-height: 2rem;
   color: #C3B8AC;
   font-weight: normal;
   font-family: Yeseva One;
@@ -232,8 +355,8 @@ body {
 .whyUs__item-subtitle {
   font-family: Manrope;
   font-style: normal;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
   color: #C3B8AC;
   font-weight: normal;
 }
@@ -279,24 +402,24 @@ body {
 .modalWindow__form label:first-child {
   font-family: Manrope;
   font-style: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: #382C21;
   font-weight: 600;
 }
 .modalWindow__form label:last-child {
   font-family: Manrope;
   font-style: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: #382C21;
   font-weight: 300;
 }
 .modalWindow__form-text {
   font-family: Manrope;
   font-style: normal;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: #85694D;
   font-weight: 300;
   padding: 9px 12px;
@@ -309,8 +432,8 @@ body {
 .modalWindow__form-submit {
   font-family: Manrope;
   font-style: normal;
-  font-size: 22px;
-  line-height: 36px;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
   color: #C3B8AC;
   font-weight: 600;
   cursor: pointer;
@@ -341,8 +464,8 @@ body {
 .modalWindow__title {
   font-family: Manrope;
   font-style: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 1.95rem;
+  line-height: 1.95rem;
   color: #382C21;
   font-weight: normal;
   font-family: Yeseva One;
@@ -351,8 +474,8 @@ body {
 .modalWindow__subtitle {
   font-family: Manrope;
   font-style: normal;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
   color: #382C21;
   font-weight: normal;
   max-width: 348px;

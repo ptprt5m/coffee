@@ -17,12 +17,15 @@
 		<div class="wrapper">
 			<div class="header__wrapper">
 				<div class="header__logo">
-					<a href="#!">
+					<a href="#">
 						<img src="img/header/logo.png" alt="logo" title="Главная страница">
 					</a>
 				</div>
-				<nav class="header__links">
+				<nav class="header__links" id="header__links">
 					<ul>
+						<li>
+							<a href="#!" class="header__link-toOrder">Заказать звонок</a>
+						</li>
 						<li>
 							<a href="#advantages" class="header__link">Преимущества</a>
 						</li>
@@ -30,16 +33,27 @@
 							<a href="#!" class="header__link">Оплата и доставка</a>
 						</li>
 						<li>
-							<a href="#!" class="header__link">Заказать кофе</a>
+							<a href="#toOrder" class="header__link">Заказать кофе</a>
 						</li>
 						<li>
 							<a href="#!" class="header__link">Отзывы</a>
 						</li>
 						<li>
-							<a href="#!" class="header__link">Контакты</a>
+							<a href="#media" class="header__link">Контакты</a>
 						</li>
 					</ul>
+					<a href="#closeBurger" class="header__close">
+						<img src="img/modal/close.png" alt="close">
+					</a>
 				</nav>
+				<div class="header__burger">
+					<div class="header__burger-items burger">
+						<span class="burger__line"></span>
+						<span class="burger__line"></span>
+						<span class="burger__line"></span>
+					</div>
+					<p class="header__burger-menu">Меню</p>
+				</div>
 				<div class="header__calls">
 					<a href="#!" class="header__calls-number">+7 (964) 324-41-25</a>
 				</div>
@@ -48,6 +62,7 @@
 	</header>
 
 	<main class="main">
+
 		<section class="toOrder">
 			<div class="wrapper">
 				<div class="toOrder__wrapper">
@@ -65,10 +80,10 @@
 					<p class="gourmetCoffee__subtitle">
 						Качественный индийский зерновой кофе на развес с доставкой по всей Москве в течение 24 часов после заказа
 					</p>
-					<a href="#openModal" class="gourmetCoffee__link">
+					<a href="#openModal" class="gourmetCoffee__link" id="toOrder">
 						ЗАКАЗАТЬ В 1 КЛИК
 					</a>
-					<div class="gourmetCoffee__media">
+					<div class="gourmetCoffee__media" id="media">
 						<a href="#!" class="gourmetCoffee__media-item">
 							<img src="img/gourmetCoffee/vk.png" alt="vk">
 						</a>

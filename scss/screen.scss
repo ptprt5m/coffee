@@ -6,10 +6,40 @@
 }
 
 @media screen and (max-width: $tableWidth) {
+    .wrapper {
+        max-width: $wrapperTableWidth;
+    }
+    .header {
+        &__absolute {
+            width: 65vw;
+            height: 60vh;
+        }
+        &__links {
+            display: none;
+        }
+        &__calls {
+            &-number {
+                background: transparent;
+                padding: 0;
+            }
+        }
+        &__burger {
+            display: flex;
+        }
+    }
+    .gourmetCoffee {
+        &__wrapper {
+            padding: 100px 0 35px;
+        }
+        &__media {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
     .whyUs {
         &__wrapper {
-            padding: 10px 45px 15px;
-        }
+		padding: 10px 0 15px;
+	}
         &__item {
             max-width: 206px;
         }

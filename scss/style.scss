@@ -5,6 +5,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: 16px;
 }
 
 *, *::before, *::after {
@@ -55,7 +56,7 @@ body {
 		@include links;
 	}
 	&__link {
-		@include text(18px, 18px, $white, 300);
+		@include text(1.1rem, 1.1rem, $white, 300);
 		&:hover, &:active, &:focus {
 			background: url('../img/header/active.png') no-repeat bottom left;
 		}
@@ -63,18 +64,104 @@ body {
 		text-decoration: none;
 		padding: 5px 0;
 		transition: .3s all;
+		&-toOrder {
+			@include text(1.1em, 1.1rem, $orangeGray, 800);
+			@include links;
+			text-decoration: underline;
+			display: none;
+		}
 	}
 	&__calls {
 		@include flexColumn {
 			align-items: flex-end
 		}
 		&-number {
-			@include text(20px, 18px, $white, 500);
+			@include text(1.2rem, 1.1rem, $white, 500);
 			@include links;
 			background: url('../img/header/call.png') no-repeat center left;
 			padding: 8px 0 8px 42px;
 		}
 	}
+}
+
+//Burger styles 
+
+
+/* Burger style start */
+
+.header {
+	&__burger {
+		@include flex;
+		display: none;
+		order: -1;
+		cursor: pointer;
+		&-menu {
+			@include text(1.2rem, 1.1rem, $orangeGray, 500);
+			margin: 0 8px;
+		}
+	}
+	&__close {
+		@include links;
+		position: absolute;
+		top: 24px;
+		right: 36px;
+	}
+}
+
+.burger {
+    height: 100%;
+    width: 100%;
+	&__line {
+		display: block;
+		margin-bottom: 4px;
+		width: 100%;
+		height: 7px;
+		background-color: $orangeGray;
+		border-radius: 5px;
+	}
+	&__box {
+		@include flexColumn;
+		position: fixed;
+		visibility: visible;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 60vh;
+		text-align: center;
+		background: url('../img/main/absolute.png') no-repeat left top;
+		background-size: cover;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+		padding-top: 75px;
+		a {
+			@include text(2rem, 2rem, $white, 300);
+			&:hover, &:active, &:focus {
+				background: url('../img/header/active.png') no-repeat bottom center;
+			}
+			cursor: pointer;
+			text-decoration: none;
+			padding-bottom: 10px;
+			transition: .3s all;
+		}
+		ul {
+			li {
+				margin-bottom: 30px;
+				&:first-child > a {
+					@include text(1.6em, 1.8rem, $orangeGray, 800);
+					@include links;
+					&:hover, &:active, &:focus {
+						background: transparent;
+					}
+					text-decoration: underline;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.header__burger-items {
+    width: 42px;
+    height: 28px;
 }
 
 //To order styles
@@ -87,7 +174,7 @@ body {
 		}
 	}
 	&__link {
-		@include text(18px, 18px, $orangeGray, 800);
+		@include text(1.1em, 1.1rem, $orangeGray, 800);
 		@include links;
 		text-decoration: underline;
 	}
@@ -100,18 +187,18 @@ body {
 		padding: 100px 0 65px 65px;
 	}
 	&__title {
-		@include text(52px, 54px, $white, normal);
+		@include text(3.25rem, 3.25rem, $white, normal);
 		@include YesevaOne;
 		max-width: 670px;
 		margin-bottom: 24px;
 	}
 	&__subtitle {
-		@include text(24px, 30px, $orangeGray, normal);
+		@include text(1.5rem, 1.8rem, $orangeGray, normal);
 		max-width: 475px;
 		margin-bottom: 77px;
 	}
 	&__link {
-		@include text(22px, 36px, $orangeGray, 600);
+		@include text(1.4rem, 2.2rem, $orangeGray, 600);
 		&:hover, &:active, &:focus {
 			box-shadow: 0px 0px 26px 4px #C3B8AC;
 		}
@@ -143,7 +230,7 @@ body {
 		padding: 10px 0 15px 65px;
 	}
 	&__title {
-		@include text(40px, 60px, $white, normal);
+		@include text(2.5rem, 3.75rem, $white, normal);
 		@include YesevaOne;
 		margin-bottom: 50px;
 	}
@@ -165,12 +252,12 @@ body {
 			background: url('../img/whyUs/delivery.png') no-repeat top center;
 		}
 		&-title {
-			@include text(28px, 32px, $orangeGray, normal);
+			@include text(1.8rem, 2rem, $orangeGray, normal);
 			@include YesevaOne;
 			margin-bottom: 16px;
 		}
 		&-subtitle {
-			@include text(18px, 22px, $orangeGray, normal);
+			@include text(1.1rem, 1.3rem, $orangeGray, normal);
 		}
 	}
 }
@@ -204,15 +291,15 @@ body {
 		}
 		label {
 			&:first-child {
-				@include text(16px, 22px, $brown, 600);
+				@include text(1rem, 1.3rem, $brown, 600);
 			}
 			&:last-child {
-				@include text(16px, 22px, $brown, 300);
+				@include text(1rem, 1.3rem, $brown, 300);
 			}
 			margin-bottom: 8px;
 		}
 		&-text {
-			@include text(16px, 22px, $brownOrange, 300);
+			@include text(1rem, 1.3rem, $brownOrange, 300);
 			padding: 9px 12px;
 			border: 0;
 			border-radius: 5px;
@@ -221,7 +308,7 @@ body {
 			z-index: 11;
 		}
 		&-submit {
-			@include text(22px, 36px, $orangeGray, 600);
+			@include text(1.3rem, 2.1rem, $orangeGray, 600);
 			@include links(90%);
 			background: linear-gradient(180deg, rgba(133, 105, 77, 0.2) 0%, rgba(56, 44, 33, 0.2) 100%), #382C21;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -239,12 +326,12 @@ body {
 		right: 18px;
 	}
 	&__title {
-		@include text(30px, 30px, $brown, normal);
+		@include text(1.95rem, 1.95rem, $brown, normal);
 		@include YesevaOne;
 		margin-bottom: 8px;
 	}
 	&__subtitle {
-		@include text(18px, 22px, $brown, normal);
+		@include text(1.1rem, 1.3rem, $brown, normal);
 		max-width: 348px;
 		margin-bottom: 24px;
 	}

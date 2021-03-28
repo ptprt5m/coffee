@@ -1,6 +1,33 @@
 @media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 668px;
+  }
+
+  .header__absolute {
+    width: 65vw;
+    height: 60vh;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__calls-number {
+    background: transparent;
+    padding: 0;
+  }
+  .header__burger {
+    display: flex;
+  }
+
+  .gourmetCoffee__wrapper {
+    padding: 100px 0 35px;
+  }
+  .gourmetCoffee__media {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .whyUs__wrapper {
-    padding: 10px 45px 15px;
+    padding: 10px 0 15px;
   }
   .whyUs__item {
     max-width: 206px;
