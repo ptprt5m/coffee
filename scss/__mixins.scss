@@ -2,6 +2,7 @@
 
 @mixin text($fs, $lh, $color: $white, $fw: normal) {
 	font-family: Manrope;
+	font-display: auto;
 	font-style: normal;
 	font-size: $fs;
 	line-height: $lh;

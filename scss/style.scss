@@ -54,9 +54,15 @@ body {
 	}
 	&__call {
 		display: none;
+		img {
+			max-width: 30px;
+		}
 	}
 	&__logo {
 		@include links;
+		&-img {
+			max-width: 55px;
+		}
 	}
 	&__link {
 		@include text(1.1rem, 1.1rem, $white, 300);
@@ -215,6 +221,9 @@ body {
 			&:not(:last-child) {
 				margin-bottom: 20px;
 			}
+			img {
+				max-width: 21px;
+			}
 		}
 	}
 }
@@ -317,6 +326,7 @@ body {
 	}
 	&__close {
 		@include links;
+		max-width: 18px;
 		position: absolute;
 		top: 24px;
 		right: 18px;
