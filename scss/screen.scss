@@ -1,10 +1,6 @@
 @import "__variables.scss";
 @import "__mixins.scss";
 
-@media screen and (min-width: 1440px) {
-    
-}
-
 @media screen and (max-width: $tableWidth) {
     .wrapper {
         max-width: $wrapperTableWidth;
@@ -106,13 +102,7 @@
         &__item {
             max-width: 206px;
             padding-top: 40px;
-            &-like {
-                background: transparent;
-            }
-            &-persent {
-                background: transparent;
-            }
-            &-delivery {
+            &-like, &-persent, &-delivery {
                 background: transparent;
             }
         }

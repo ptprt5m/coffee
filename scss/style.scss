@@ -109,24 +109,21 @@ body {
 }
 
 .burger {
-    height: 100%;
-    width: 100%;
+    @include wh(100%, 100%);
 	&__line {
+		@include wh(100%, 7px);
 		display: block;
 		margin-bottom: 4px;
-		width: 100%;
-		height: 7px;
 		background-color: $orangeGray;
 		border-radius: 5px;
 	}
 	&__box {
 		@include flexColumn;
+		@include wh(100vw, 60vh);
 		position: fixed;
 		visibility: visible;
 		top: 0;
 		left: 0;
-		width: 100vw;
-		height: 60vh;
 		text-align: center;
 		background: url('../img/main/absolute.png') no-repeat left top;
 		background-size: cover;
@@ -160,8 +157,7 @@ body {
 }
 
 .header__burger-items {
-    width: 42px;
-    height: 28px;
+	@include wh(42px, 28px);
 }
 
 //To order styles
@@ -274,7 +270,7 @@ body {
 	opacity: 0;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
-
+	
 	&__wrapper {
 		@include flexColumn;
 		max-width: 540px;
