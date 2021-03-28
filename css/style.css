@@ -49,6 +49,9 @@ body {
 .header__links ul li:not(:last-child) {
   margin-right: 24px;
 }
+.header__call {
+  display: none;
+}
 .header__logo {
   cursor: pointer;
   text-decoration: none;
@@ -114,7 +117,6 @@ body {
   opacity: 65%;
 }
 
-/* Burger style start */
 .header__burger {
   display: flex;
   justify-content: space-between;

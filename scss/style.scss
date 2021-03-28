@@ -52,6 +52,9 @@ body {
 			}
 		}
 	}
+	&__call {
+		display: none;
+	}
 	&__logo {
 		@include links;
 	}
@@ -85,9 +88,6 @@ body {
 }
 
 //Burger styles 
-
-
-/* Burger style start */
 
 .header {
 	&__burger {

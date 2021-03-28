@@ -46,6 +46,95 @@
     }
 }
 
-@media screen and (max-width: 545px) {
-    
+@media screen and (max-width: $mobileWidth) {
+    .wrapper {
+       max-width: $wrapperMobileWidth;
+    }
+    .header {
+        &__absolute {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+        &__links {
+            display: none;
+        }
+        &__calls {
+            display: none;
+        }
+        &__call {
+			display: block;
+		}
+        &__burger {
+            display: flex;
+            &-menu {
+                display: none;
+            }
+        }
+    }
+    .toOrder {
+        display: none;
+    }
+    .gourmetCoffee {
+        &__wrapper {
+            padding: 100px 0 65px;
+        }
+        &__title {
+            @include text(1.7rem, 1.7rem, $white, normal);
+            @include YesevaOne;
+        }
+        &__subtitle {
+            @include text(1.1rem, 1.1rem, $orangeGray, normal);
+        }
+        &__link {
+            @include text(1.4rem, 2.2rem, $orangeGray, 600);
+        }
+    } 
+    .whyUs {
+        &__wrapper {
+            padding: 10px 0 35px;
+            @include flexColumn;
+        }
+        &__title {
+            @include text(1.5rem, 1.5rem, $white, normal);
+            @include YesevaOne;
+            margin-bottom: 20px;
+        }
+        &__items {
+            @include flexColumn;
+        }
+        &__item {
+            max-width: 206px;
+            padding-top: 40px;
+            &-like {
+                background: transparent;
+            }
+            &-persent {
+                background: transparent;
+            }
+            &-delivery {
+                background: transparent;
+            }
+        }
+    }
+    .burger {
+        &__box {
+            height: 100vh;
+        }
+    }
+    .modalWindow {
+        &__form {
+            max-width: 212px;
+            @include flexColumn {
+                align-items: flex-start;
+            }
+            &-text {
+                min-width: 212px;
+            }
+            &-submit {
+                @include text(1rem, 1rem, $orangeGray, 600);
+                padding: 13px 23px;
+            }
+        }
+    }
 }
